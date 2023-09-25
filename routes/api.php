@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/registration', [\App\Http\Controllers\RegistrationController::class, 'store'])->middleware('guest');
+Route::get('/posts/{page?}', [\App\Http\Controllers\PublicPostController::class, 'index'])->where('page', '[0-9]+');;

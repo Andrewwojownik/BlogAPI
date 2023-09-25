@@ -10,10 +10,6 @@ use \Codeception\Example;
 
 class RegisterUserCest
 {
-    public function _before(ApiTester $I)
-    {
-    }
-
     public function registerUserHappyPathTest(ApiTester $I): void
     {
         $I->haveHttpHeader('Content-Type', 'application/x-www-form-urlencoded');
