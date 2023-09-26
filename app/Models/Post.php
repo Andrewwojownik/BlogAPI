@@ -34,7 +34,7 @@ class Post extends Model
     protected $fillable = [
         'title',
         'content',
-        'author',
+        'author_uuid',
     ];
 
     public function author()

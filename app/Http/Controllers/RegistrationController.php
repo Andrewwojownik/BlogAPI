@@ -12,8 +12,8 @@ class RegistrationController extends Controller
 {
     public function store(RegistrationRequest $request): JsonResponse
     {
-        $user = User::create($request->all());
+        User::create($request->all());
 
-        return response()->json(['status' => 'ok',])->setStatusCode(Response::HTTP_OK);
+        return response()->json(['status' => 'ok',])->setStatusCode(Response::HTTP_CREATED);
     }
 }

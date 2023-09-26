@@ -23,7 +23,10 @@ php vendor/bin/codecept run Api
 ## TODO
 
 - swagger
+- move logic from controller to services
 - unit tests for services
 - better pagination information on responses
 - json response schema validation in codeception
 - better model serialization
+- add more support functions to codeception Api actor to reduce test code size
+- ACL for admin and editor role

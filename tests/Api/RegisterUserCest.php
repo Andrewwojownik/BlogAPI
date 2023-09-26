@@ -18,7 +18,7 @@ class RegisterUserCest
             'email' => 'test@example.com',
             'password' => 'test12345678',
         ]);
-        $I->seeResponseCodeIsSuccessful();
+        $I->seeResponseCodeIs(Response::HTTP_CREATED);
         $I->seeResponseIsJson();
         $I->seeResponseContains('{"status":"ok"}');
     }

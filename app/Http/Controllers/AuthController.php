@@ -5,17 +5,10 @@ namespace App\Http\Controllers;
 
 use App\Enums\UserRole;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
 class AuthController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:api', ['except' => ['login']]);
-    }
-
     public function login(): JsonResponse
     {
         $credentials = request(['email', 'password']);
