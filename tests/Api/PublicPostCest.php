@@ -7,7 +7,7 @@ use Tests\Support\ApiTester;
 
 class PublicPostCest
 {
-    public function fetchWithoutPage(ApiTester $I): void
+    public function fetchWithoutPageTeset(ApiTester $I): void
     {
         $I->haveHttpHeader('Content-Type', 'application/x-www-form-urlencoded');
         $I->sendGet('/posts');
@@ -28,10 +28,9 @@ class PublicPostCest
                                                    'updated_at' => 'null|string',]
                                            ]
                                        ]);
-
     }
 
-    public function fetchPage(ApiTester $I): void
+    public function fetchPageTest(ApiTester $I): void
     {
         $I->haveHttpHeader('Content-Type', 'application/x-www-form-urlencoded');
         $I->sendGet('/posts/3');

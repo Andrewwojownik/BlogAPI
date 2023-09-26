@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/registration', [\App\Http\Controllers\RegistrationController::class, 'store'])->middleware('guest');
-Route::get('/posts/{page?}', [\App\Http\Controllers\PublicPostController::class, 'index'])->where('page', '[0-9]+');;
+Route::get('/posts/{page?}', [\App\Http\Controllers\PublicPostController::class, 'index'])->where('page', '[0-9]+');
+
+Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login']);
+Route::post('/logout', [\App\Http\Controllers\AuthController::class, 'logout']);
+Route::post('/refresh', [\App\Http\Controllers\AuthController::class, 'refresh']);
+Route::get('/me', [\App\Http\Controllers\AuthController::class, 'me']);
